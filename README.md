@@ -25,33 +25,20 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
+|user_name|integer|null: false|
 |email|string|null: false|
 |password|integer|null: false|
 ### Association
-- has_many: edits
-- belongs_to: group
-- belongs_to: group_user
-- belongs_to: login
-
-## editsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false|
-|email|string|null: false|
-### Association
-- has_many: users
+- has_many: groups_users
+- has_many: message
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
-|group_id|integer|null: false|
-|message|text|null: false|
-|image|string|null: false|
+|group_name|integer|null: false|
 ### Association
-- has_many: groups
-- belongs_to: user
+- has_many: groups_users
+- has_many: message
 
 ## groups_usersテーブル
 |Column|Type|Options|
@@ -59,13 +46,14 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :group
 - belongs_to :user
+- belongs_to :group
 
-## Loginテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|email|string|null: false|
-|password|integer|null: false|
+|message|string|null: false|
+|image|string|null: false|
 ### Association
 - belongs_to :user
+- belongs_to :group
