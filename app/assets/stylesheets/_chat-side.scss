@@ -1,6 +1,10 @@
+:root{
+  --w-color: white;
+}
+
 .chat-side{
   width: 300px;
-  color: white;
+  color: var(--w-color);
   float: left;
   box-sizing: border-box;
 
@@ -29,7 +33,7 @@
         justify-content: flex-end;
         height: 20px;
         width: 60px;
-        color: white;
+        color: var(--w-color);
         text-decoration: none;
         
         &__new-group{
@@ -48,16 +52,17 @@
     overflow: scroll;
     &__name{
       width: 100%;
-      color:white;
+      color: var(--w-color);
       margin-top: 40px;
       font-size: 15px;
     }
     &__message{
       width:100%;
-      color:white;
+      color: var(--w-color);
       margin-top: 5px;
       font-size: 11px;
 
     }
   }
+  
 }

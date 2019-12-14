@@ -16,9 +16,9 @@
         message
   .chat-main__message-form  
     .chat-main__message-form__box
-      %input{:placeholder => "message", :class => "chat-main__message-form__box__message", :type => "text"}
+      %input{placeholder: "message", class: "chat-main__message-form__box__message", type: "text"}
       .chat-main__message-form__box__image
-        %label{class: "chat-main__message-form__box__image"}
+        %label.chat-main__message-form__box__image
           = icon('fa', 'image')
           %input{type: "file" , class: "chat-main__message-form__box__image__label"}
     
