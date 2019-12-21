@@ -1,6 +1,9 @@
 :root{
   --w-color: white;
 }
+a{
+  text-decoration: none;
+}
 
 .chat-side{
   width: 300px;
@@ -50,6 +53,7 @@
     background-color:#2f3e51;
     padding: 0px 20px;
     overflow: scroll;
+    
     &__name{
       width: 100%;
       color: var(--w-color);

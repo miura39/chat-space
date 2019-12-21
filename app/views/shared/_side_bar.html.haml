@@ -5,17 +5,17 @@
         = current_user.name
       .chat-side__user-name__box__top-items      
         .chat-side__user-name__box__top-items__new-group
-          = link_to new_group_path , class: "chat-side__user-name__box__top-items chat-side__user-name__box__top-items__new-group" do
+          = link_to new_group_path, class: "chat-side__user-name__box__top-items chat-side__user-name__box__top-items__new-group" do
             =icon('fa', 'edit')
         .chat-side__user-name__box__top-items__menu
-        = link_to "###" , class: "chat-side__user-name__box__top-items chat-side__user-name__box__top-items__menu" do
+        = link_to  edit_user_path(current_user), class: "chat-side__user-name__box__top-items chat-side__user-name__box__top-items__menu" do
           =icon('fa', 'cog')
   .chat-side__group
     - current_user.groups.each do |group|
-      = link_to '#' ,class:"chat-side__groups" do
+      = link_to group_messages_path(group.id) ,class:"chat-side__groups" do
         .chat-side__group__name
           = group.name
         .chat-side__group__message
-          メッセージなし
+          =group. show_last_message
         
         

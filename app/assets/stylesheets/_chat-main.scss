@@ -58,16 +58,15 @@
     display: flex;
     justify-content: space-between;
     
-    &__box{
+    .new_message{
       display: flex;
       width: 100%;
-      position: relative;
       
 
       &__message{
         
         height: 50px;
-        width: 100%;
+        width: 80%;
         padding: 0 40px 0 10px;
         color: #434a54;
         border-style: none;
@@ -76,20 +75,19 @@
       
               
       &__image{
-      top: 5px;
-      right: 5px;
-      position: absolute;
+      background-color: #fff;
       font-size: 20.8px;
       color: black;
       cursor: pointer;
+      line-height: 50px;
+      padding-right: 10px;
         &__label{
           display: none;
        }
          
     }
-  }
-    &__send{
-      width: 100px;
+    &__form__send{
+      width: 20%;
       height: 50px;
       padding: 0 30px;
       margin-left: 15px;
@@ -97,8 +95,11 @@
       color: var(--w-color);
       cursor: pointer;
       line-height: 50px;
+      display: inline-block;
     }
-
+    }
+    
+  
 }
 
 }
