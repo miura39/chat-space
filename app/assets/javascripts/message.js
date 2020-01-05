@@ -17,7 +17,7 @@ $(function(){
            </p>
          </div>
          <img src="${message.image}">
-       </div>>`
+       </div>`
      return html;
    } else {
      var html =
@@ -54,12 +54,14 @@ $('#new_message').on('submit', function(e){
     $('.chat-main__message-list').append(html);      
     $('form')[0].reset();
     $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
-    $('.new_message__form__send').attr('disabled', false);
   })
   .fail(function() {
     alert("メッセージ送信に失敗しました");
+  })
+  .always(function() {
     $('.new_message__form__send').attr('disabled', false);
   })
+
   });
 })
 
