@@ -4,16 +4,14 @@ $(function(){
    if ( message.image ) {
      var html =
       `<div class="chat-main__message-lists" data-message-id="${message.id}">
-         <div class="chat-main__message-lists">
-           <div class="chat-main__message-lists__name">
-             ${message.user_name}
-           </div>
-           <div class="chat-main__message-lists__time">
-            ${message.created_at}
-           </div>
-         </div>
-         <div class="chat-main__message-lists">
-           <p class="chat-main__message-lists__content">
+          <div class="chat-main__message-lists__name">
+            ${message.user_name}
+          </div>
+          <div class="chat-main__message-lists__time">
+          ${message.created_at}
+          </div>
+         <div class="chat-main__message-lists__message">
+           <p class="chat-main__message-lists__message__content">
            ${message.content}
            </p>
          </div>
@@ -48,12 +46,12 @@ $(function(){
     data: formData,
     dataType: 'json',
     processData: false,
-    contentType: false
+    contentType: false,
   })
     .done(function(data){
       var html = buildHTML(data);
       $('.chat-main__message-list').append(html);      
-      $('form')[0].reset();
+      $('#new_message')[0].reset();
       $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
     })
     .fail(function() {
