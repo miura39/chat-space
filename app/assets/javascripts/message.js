@@ -53,7 +53,6 @@ $(function(){
       $('.chat-main__message-list').append(html);      
       $('#new_message')[0].reset();
       $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
-      console.log("2")
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
@@ -85,7 +84,6 @@ $(function(){
         $("#new_message")[0].reset();
         $(".new_message__form__send").prop("disabled", false);
         }
-        console.log("1")
       })
       
       .fail(function() {
