@@ -91,7 +91,6 @@ $(function(){
       .fail(function() {
         alert('error');
       });
-      return false;
     };
 
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
